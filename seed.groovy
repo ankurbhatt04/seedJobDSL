@@ -4,6 +4,7 @@ def createDeploymentJob(jobName, repoUrl) {
             cpsScm {
                 scm {
                     git {
+                        id('1234556789')
                         remote {
                             url(repoUrl)
                         }
@@ -23,6 +24,7 @@ def createTestJob(jobName, repoUrl) {
     multibranchPipelineJob(jobName) {
         branchSources {
             git {
+                id('1234556789')
                 remote(repoUrl)
                 includes('*')
             }
