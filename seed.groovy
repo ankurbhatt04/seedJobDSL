@@ -3,9 +3,9 @@ def createTestJob(ApplicationName, repoUrl) {
         branchSources {
             git {
                 id('12342343r434fe2')
-                credentialsId('d594a6aa-4545-45fe-acca-d21d4088c63')    
+                credentialsId('d594a6aa-4545-45fe-acca-d21d4088c63f')    
                 remote(repoUrl)
-                includes('*')
+                includes('jenkinsFileTest')
             }
         }
         triggers {
