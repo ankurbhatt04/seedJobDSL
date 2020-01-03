@@ -33,7 +33,7 @@ def createTestJob(jobName, repoUrl) {
     }
 }
 
-def buildPipelineJobs() {
+def buildPipelineJobs(ApplicationName) {
     def repo = "https://github.com/ankurbhatt04/DevOpsGit"
     // def repoUrl = repo + jobName + ".git"
     // def deployName = jobName + "_deploy"
@@ -43,7 +43,7 @@ def buildPipelineJobs() {
     createTestJob(ApplicationName, repo)
 }
 
-buildPipelineJobs()
+buildPipelineJobs(ApplicationName)
 
 
 // branchSources {
