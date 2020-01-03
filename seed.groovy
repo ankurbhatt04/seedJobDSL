@@ -1,8 +1,9 @@
-def createTestJob(jobName, repoUrl) {
-    multibranchPipelineJob(jobName) {
+def createTestJob(ApplicationName, repoUrl) {
+    multibranchPipelineJob(ApplicationName) {
         branchSources {
             git {
-                id('12342343r434fe2')    
+                id('12342343r434fe2')
+                credentialsId('credentials')    
                 remote(repoUrl)
                 includes('*')
             }
