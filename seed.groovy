@@ -1,25 +1,3 @@
-def createDeploymentJob(jobName, repoUrl) {
-    pipelineJob(jobName) {
-        definition {
-            cpsScm {
-                scm {
-                    git {
-                        remote {
-                            id('123456789')
-                            url(repoUrl)
-                        }
-                        branches('master')
-                        extensions {
-                            cleanBeforeCheckout()
-                        }
-                    }
-                }
-                scriptPath("Jenkinsfile")
-            }
-        }
-    }
-}
-
 def createTestJob(jobName, repoUrl) {
     multibranchPipelineJob(jobName) {
         branchSources {
@@ -41,7 +19,6 @@ def buildPipelineJobs(ApplicationName) {
     // def deployName = jobName + "_deploy"
     // def testName = jobName + "_test"
 
-    createDeploymentJob(ApplicationName, repo)
     createTestJob(ApplicationName, repo)
 }
 
