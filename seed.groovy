@@ -5,6 +5,7 @@ def createDeploymentJob(jobName, repoUrl) {
                 scm {
                     git {
                         remote {
+                            id('123456789')
                             url(repoUrl)
                         }
                         branches('master')
