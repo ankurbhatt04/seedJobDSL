@@ -8,15 +8,20 @@ def createTestJob(ApplicationName, repoUrl) {
                 includes('jenkinsFileTest')
             }
         }
-        triggers {
-            cron("H/5 * * * *")
-        }
+        
+        // triggers {
+        //     urlTrigger(String crontab = null) {
+        //         url(String url){
+        //             check(lastModified)  // Check the lastModified and trigger automatically this job
+        //         }
+        //     }
+        // }
         
         orphanedItemStrategy {
-        discardOldItems {
-            numToKeep(5)
+            discardOldItems {
+                numToKeep(5)
+            }
         }
-    }
     }
 }
 
@@ -51,3 +56,5 @@ buildPipelineJobs(ApplicationName)
 //           }
 //       }
 // } 
+
+
