@@ -34,7 +34,7 @@ def buildPipelineJobs(ApplicationName) {
     createTestJob(ApplicationName, repo)
 }
 
-buildPipelineJobs(ApplicationName)
+buildPipelineJobs("abc")
 
 
 // branchSources {
